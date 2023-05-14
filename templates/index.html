@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PROJECT</title>
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css')}}">
+    </head>
+
+    <body>
+        <form  action = "{{ url_for('home')}}" method = "post">
+            <br>
+            <div class="label_text">
+                <h1>News Generation</h1>
+            </div>
+            <input type="text" id="model_input" name="model_a" 
+            placeholder="Enter something">
+            <br>
+            <br>
+            <button id = "btn">SUBMIT</button>
+            <br>
+            <br>
+            <div class="box">
+                <h1>{{ model_output }}</h1>
+            </div>
+        </form>
+    </body>
+</html>
